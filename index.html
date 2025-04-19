@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reasons I Love You 💖</title>
+  <style>
+    body {
+      background: #ffe4e1;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      flex-direction: column;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 400px;
+    }
+    h1 {
+      color: #ff69b4;
+    }
+    #reason {
+      font-size: 1.2em;
+      margin: 20px 0;
+    }
+    button {
+      background: #ff69b4;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #ff1493;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Reasons I Love You 💘</h1>
+    <p id="reason">Click the button to see a reason!</p>
+    <button onclick="showReason()">Show Me 💕</button>
+  </div>
+
+  <script>
+    const reasons = [
+      "You make me smile every single day 😊",
+      "You're my favorite person to talk to 💬",
+      "You always know how to cheer me up 🌈",
+      "Your hugs are better than anything 🤗",
+      "You believe in me even when I don't 💪",
+      "You’re my sunshine on cloudy days ☀️",
+      "You're beautiful inside and out 💖",
+      "Being with you feels like home 🏡",
+      "You make everything better 💫",
+      "I love you just the way you are 😘"
+    ];
+
+    function showReason() {
+      const reason = reasons[Math.floor(Math.random() * reasons.length)];
+      document.getElementById("reason").textContent = reason;
+    }
+  </script>
+</body>
+</html>
